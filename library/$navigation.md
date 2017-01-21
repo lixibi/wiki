@@ -2,6 +2,7 @@
 #### [首页](?file=首页 "返回首页")
 
 ##### 学习资料
+- **Python**
 - **amWiki资料**
     - [amWiki轻文库简介](?file=000-学习资料/001-amWiki资料/01-amWiki轻文库简介 "amWiki轻文库简介")
     - [amWiki功能导图](?file=000-学习资料/001-amWiki资料/02-amWiki功能导图 "amWiki功能导图")
@@ -12,18 +13,19 @@
     - [通用API接口文档示例](?file=000-学习资料/001-amWiki资料/08-通用API接口文档示例 "通用API接口文档示例")
     - [超长文档页内目录示例](?file=000-学习资料/001-amWiki资料/09-超长文档页内目录示例 "超长文档页内目录示例")
 - **学习markdown**
+    - [atom预览markdown](?file=000-学习资料/002-学习markdown/00-atom预览markdown "atom预览markdown")
     - [Markdown快速开始](?file=000-学习资料/002-学习markdown/01-Markdown快速开始 "Markdown快速开始")
     - [amWiki与语法高亮](?file=000-学习资料/002-学习markdown/02-amWiki与语法高亮 "amWiki与语法高亮")
     - [amWiki与流程图](?file=000-学习资料/002-学习markdown/03-amWiki与流程图 "amWiki与流程图")
     - [Atom对Markdown的原生支持](?file=000-学习资料/002-学习markdown/05-Atom对Markdown的原生支持 "Atom对Markdown的原生支持")
+    - [htmlTOmarkdown](?file=000-学习资料/002-学习markdown/06-htmlTOmarkdown "htmlTOmarkdown")
+- **正则表达式**
+    - [正则思维导图1](?file=000-学习资料/003-正则表达式/00-正则思维导图1 "正则思维导图1")
 
 ##### CODE
 - **IDE**
 - **Python**
 - **markdown**
-    - [atom预览markdown](?file=001-CODE/02-markdown/01-atom预览markdown "atom预览markdown")
-    - [htmlTOmarkdown](?file=001-CODE/02-markdown/02-htmlTOmarkdown "htmlTOmarkdown")
-    - [amWiki与流程图](?file=001-CODE/02-markdown/03-amWiki与流程图 "amWiki与流程图")
 
 ##### 文档备份
 
