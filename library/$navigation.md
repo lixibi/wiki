@@ -26,6 +26,8 @@
 - **IDE**
 - **Python**
 - **markdown**
+- **其他**
+    - [语义分析](?file=001-CODE/004-其他/01-语义分析 "语义分析")
 
 ##### 文档备份
 
@@ -37,6 +39,8 @@
 
 ##### 常用软件
 - **windows**
+    - [vs2015](?file=006-常用软件/01-windows/01-vs2015 "vs2015")
+    - [windows10iso](?file=006-常用软件/01-windows/02-windows10iso "windows10iso")
 - **macos**
 - **Linux**
 - **ios**
