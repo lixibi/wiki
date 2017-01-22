@@ -53,7 +53,7 @@
     <pre>ed2k://|file|mu_windows_10_language_pack_x86_dvd_6846439.iso|963231744|D6EF0A816846D3758B0D23894DA84159|/</pre>
 
     </div>
-    
+
 *   <div class="checkbox"><label><input type="checkbox" data-url="ed2k://|file|mu_windows_10_language_pack_version_1607_updated_jul_2016_x86_x64_dvd_9058649.iso|4155375616|BA974F886DA8A1686ACD2E2A50263B2A|/" value="d921f25b-37de-4dbb-becf-d594d354350a">Windows 10 Language Pack, Version 1607 (Updated Jul 2016) (x86 and x64) - DVD (Multiple Languages)</label> <span class="label label-primary getFileDetail" data-loaded="true" data-id="d921f25b-37de-4dbb-becf-d594d354350a" data-loading="false">详细信息</span></div>
 
     <div class="detail">
