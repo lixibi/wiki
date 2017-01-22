@@ -17,7 +17,6 @@
     - [amWiki与语法高亮](?file=000-学习资料/002-学习markdown/02-amWiki与语法高亮 "amWiki与语法高亮")
     - [amWiki与流程图](?file=000-学习资料/002-学习markdown/03-amWiki与流程图 "amWiki与流程图")
     - [Atom对Markdown的原生支持](?file=000-学习资料/002-学习markdown/05-Atom对Markdown的原生支持 "Atom对Markdown的原生支持")
-    - [htmlTOmarkdown](?file=000-学习资料/002-学习markdown/06-htmlTOmarkdown "htmlTOmarkdown")
 - **正则表达式**
     - [正则思维导图1](?file=000-学习资料/003-正则表达式/00-正则思维导图1 "正则思维导图1")
 - [太阳影长关系分析](?file=000-学习资料/004-太阳影长关系分析 "太阳影长关系分析")
@@ -41,7 +40,8 @@
 - [迅雷下载宝链接](?file=007-影音/00-迅雷下载宝链接 "迅雷下载宝链接")
 
 ##### 书籍
-- [pdf](?file=008-书籍/01-pdf "pdf")
+- [kinde书目](?file=008-书籍/00-kinde书目 "kinde书目")
+- [kindle个人文档](?file=008-书籍/01-kindle个人文档 "kindle个人文档")
 
 ##### 量化笔记
 - **API**
@@ -61,3 +61,6 @@
     - [三天法则](?file=009-量化笔记/03-研究/02-三天法则 "三天法则")
     - [聚宽代码](?file=009-量化笔记/03-研究/03-聚宽代码 "聚宽代码")
     - [ATR止损](?file=009-量化笔记/03-研究/04-ATR止损 "ATR止损")
+
+##### 转换工具
+- [ToMarkdown](?file=010-转换工具/00-ToMarkdown "ToMarkdown")
