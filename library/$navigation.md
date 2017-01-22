@@ -2,6 +2,7 @@
 #### [首页](?file=首页 "返回首页")
 
 ##### 学习资料
+- **Python**
 - **amWiki资料**
     - [amWiki轻文库简介](?file=000-学习资料/001-amWiki资料/01-amWiki轻文库简介 "amWiki轻文库简介")
     - [amWiki功能导图](?file=000-学习资料/001-amWiki资料/02-amWiki功能导图 "amWiki功能导图")
@@ -26,18 +27,39 @@
     - [换班表生成工具](?file=001-CODE/000-python/00-换班表生成工具 "换班表生成工具")
     - [普法考试答案整理](?file=001-CODE/000-python/01-普法考试答案整理 "普法考试答案整理")
     - [大小写金额转换](?file=001-CODE/000-python/02-大小写金额转换 "大小写金额转换")
+- **IDE**
+- **Python**
+- **markdown**
 - **其他**
     - [语义分析](?file=001-CODE/004-其他/01-语义分析 "语义分析")
 
-##### 游戏
-- [阴阳师现世符咒](?file=005-游戏/01-阴阳师现世符咒 "阴阳师现世符咒")
+##### 文档备份
 
-##### 常用软件
+##### 收藏链接
+
+##### 记事
+
+##### 游戏
+- **剑网三**
+- **阴阳师**
+    - [阴阳师现世符咒](?file=005-游戏/01-阴阳师/01-阴阳师现世符咒 "阴阳师现世符咒")
+- **守望先锋**
+- **主机游戏**
+- **3ds**
+- **其他电脑单机**
+
+##### 软件应用
 - **windows**
-    - [快速启动Rolan](?file=006-常用软件/01-windows/00-快速启动Rolan "快速启动Rolan")
-    - [vs2015](?file=006-常用软件/01-windows/01-vs2015 "vs2015")
-    - [windows10iso](?file=006-常用软件/01-windows/02-windows10iso "windows10iso")
-    - [GithubDesktop离线版](?file=006-常用软件/01-windows/03-GithubDesktop离线版 "GithubDesktop离线版")
+    - [快速启动Rolan](?file=006-软件应用/01-windows/00-快速启动Rolan "快速启动Rolan")
+    - [vs2015](?file=006-软件应用/01-windows/01-vs2015 "vs2015")
+    - [windows10iso](?file=006-软件应用/01-windows/02-windows10iso "windows10iso")
+    - [GithubDesktop离线版](?file=006-软件应用/01-windows/03-GithubDesktop离线版 "GithubDesktop离线版")
+- **macos**
+- **Linux**
+- **ios**
+- **Android**
+- **3ds**
+- **网站app**
 
 ##### 影音
 - [迅雷下载宝链接](?file=007-影音/00-迅雷下载宝链接 "迅雷下载宝链接")
@@ -67,3 +89,7 @@
 
 ##### 转换工具
 - [ToMarkdown](?file=010-转换工具/00-ToMarkdown "ToMarkdown")
+
+##### 硬件
+- [网线夹法](?file=011-硬件/00-网线夹法 "网线夹法")
+- [iphone拆机换电池](?file=011-硬件/01-iphone拆机换电池 "iphone拆机换电池")
