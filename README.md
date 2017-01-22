@@ -1,7 +1,7 @@
 # 李希宁wiki
 
 ### 欢迎访问！
-这里是个人构建的wiki知识库  
+这里是个人构建的wiki知识库  [链接](http://wiki.lixining.com)
 需要了解更多维护者的情况，请访问 [lixining.com](http://lixining.com)。
 
 
