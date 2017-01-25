@@ -44,7 +44,10 @@
     - [windows10iso](?file=006-软件应用/01-windows/02-windows10iso "windows10iso")
     - [GithubDesktop离线版](?file=006-软件应用/01-windows/03-GithubDesktop离线版 "GithubDesktop离线版")
     - [数据恢复与u盘杀毒](?file=006-软件应用/01-windows/04-数据恢复与u盘杀毒 "数据恢复与u盘杀毒")
+<<<<<<< HEAD
     - [autohotkey脚本](?file=006-软件应用/01-windows/05-autohotkey脚本 "autohotkey脚本")
+=======
+>>>>>>> origin/master
 - **macos**
     - [文件恢复软件](?file=006-软件应用/02-macos/00-文件恢复软件 "文件恢复软件")
 
