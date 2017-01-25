@@ -61,6 +61,7 @@
     - [autohotkey脚本](?file=006-软件应用/01-windows/05-autohotkey脚本 "autohotkey脚本")
 - **macos**
     - [文件恢复软件](?file=006-软件应用/02-macos/00-文件恢复软件 "文件恢复软件")
+    - [NTFS读写](?file=006-软件应用/02-macos/01-NTFS读写 "NTFS读写")
 - **Linux**
 - **ios**
 - **Android**
