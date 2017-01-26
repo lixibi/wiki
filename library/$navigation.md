@@ -62,7 +62,7 @@
 - **macos**
     - [文件恢复软件](?file=006-软件应用/02-macos/00-文件恢复软件 "文件恢复软件")
     - [NTFS读写](?file=006-软件应用/02-macos/01-NTFS读写 "NTFS读写")
-    - [驱动](?file=006-软件应用/02-macos/03-驱动 "驱动")
+    - [macos驱动](?file=006-软件应用/02-macos/03-macos驱动 "macos驱动")
 - **Linux**
 - **ios**
 - **Android**
