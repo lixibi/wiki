@@ -1,7 +1,7 @@
 Chapter 1. The Python Data Model
 第一章－Python数据模型
 ********************************
-  
+
 *Guido’s sense of the aesthetics of language design is amazing. I’ve met many fine language designers who could build theoretically beautiful languages that no one would ever use, but Guido is one of those rare people who can build a language that is just slightly less theoretically beautiful but thereby is a joy to write programs in[3].*
 
 *— Jim Hugunin creator of Jython, co-creator of AspectJ, architect of the .Net DLR*  
@@ -82,7 +82,7 @@ class FrenchDeck:
     def __getitem__(self, position):
         return self._cards[position]
 ```
-  
+
 The first thing to note is the use of collections.namedtuple to construct a simple class to represent individual cards. Since Python 2.6, namedtuple can be used to build classes of objects that are just bundles of attributes with no custom methods, like a database record. In the example we use it to provide a nice representation for the cards in the deck, as shown in the console session:  
 
 要注意的第一件事情是使用collections.namedtuple构建一个简单的类来表示每张牌。从Python2.6起，namedtuple可以向数据库记录一样，只使用一组没有自定义方法的属性来构建对象的类。在这个例子中我们用它来为整副牌提供一个好看的外观，一如控制台会话所示：  
@@ -92,7 +92,7 @@ The first thing to note is the use of collections.namedtuple to construct a simp
 >>> beer_card
 Card(rank='7', suit='diamonds')
 ```
-  
+
 But the point of this example is the `FrenchDeck` class. It’s short, but it packs a punch. First, like any standard Python collection, a deck responds to the `len()` function by returning the number of cards in it.  
 
 ```python
@@ -100,7 +100,7 @@ But the point of this example is the `FrenchDeck` class. It’s short, but it pa
 >>> len(deck)
 52
 ```
-  
+
 但是这个例子的关键点在于类`FrenchDeck`。这个类的代码略少，但是它直中要害。首先，和任何其他的Python集合一样，deck通过返回纸牌的数量已响应`len()`函数：  
 
 Reading specific cards from the deck, say, the first or the last, should be as easy as `deck[0]` or `deck[-1]`, and this is what the `__getitem__` method provides.  
@@ -113,7 +113,7 @@ Card(rank='2', suit='spades')
 >>> deck[-1]
 Card(rank='A', suit='hearts')
 ```
-  
+
 Should we create a method to pick a random card? No need. Python already has a function to get a random item from a sequence: random.choice. We can just use it on a deck instance:  
 
 ```python
@@ -125,14 +125,14 @@ Card(rank='K', suit='spades')
 >>> choice(deck)
 Card(rank='2', suit='clubs')
 ```
-  
+
 We’ve just seen two advantages of using special methods to leverage the Python Data Model:  
-    
+
 1. The users of your classes don’t have to memorize arbitrary method names for standard operations (“How to get the number of items? Is it .size() .length() or what?”)
 
 2. It’s easier to benefit from the rich Python standard library and avoid reinventing the wheel, like the random.choice function.  
 
-  
+
 But it gets better.  
 
 Because our `__getitem__ `delegates to the `[]` operator of `self._cards`, our deck automatically supports slicing. Here’s how we look at the top three cards from a brand new deck, and then pick just the aces by starting on index 12 and skipping 13 cards at a time:  
@@ -145,7 +145,7 @@ Card(rank='4', suit='spades')]
 [Card(rank='A', suit='spades'), Card(rank='A', suit='diamonds'),
 Card(rank='A', suit='clubs'), Card(rank='A', suit='hearts')]
 ```
-  
+
 Just by implementing the `__getitem__` special method, our deck is also iterable:  
 ```python
 >>> for card in deck:  # doctest: +ELLIPSIS
@@ -155,7 +155,7 @@ Card(rank='3', suit='spades')
 Card(rank='4', suit='spades')
 ...
 ```
-  
+
 The deck can also be iterated in reverse:  
 
 ```python
@@ -178,7 +178,7 @@ True
 >>> Card('7', 'beasts') in deck
 False
 ```
-  
+
 How about sorting? A common system of ranking cards is by rank (with aces being highest), then by suit in the order: spades (highest), then hearts, diamonds and clubs (lowest). Here is a function that ranks cards by that rule, returning 0 for the 2 of clubs and 51 for the ace of spades:  
 
 ```python
@@ -188,7 +188,7 @@ def spades_high(card):
     rank_value = FrenchDeck.ranks.index(card.rank)
     return rank_value * len(suit_values) + suit_values[card.suit]
 ```
-  
+
 Given `spades_high`, we can now list our deck in order of increasing rank:  
 ```python
 >>> for card in sorted(deck, key=spades_high):  # doctest: +ELLIPSIS
@@ -201,12 +201,12 @@ Card(rank='A', suit='diamonds')
 Card(rank='A', suit='hearts')
 Card(rank='A', suit='spades')
 ```
-  
+
 Although FrenchDeck implicitly inherits from `object`[6], its functionality is not inherited, but comes from leveraging the Data Model and composition. By implementing the special methods `__len__` and `__getitem__` our `FrenchDeck` behaves like a standard Python sequence, allowing it to benefit from core language features—like iteration and slicing—and from the standard library, as shown by the examples using `random.choice`, `reversed` and `sorted`. Thanks to composition, the `__len__` and `__getitem__` implementations can hand off all the work to a `list` object, `self._cards`.  
 
 ##### HOW ABOUT SHUFFLING?
 As implemented so far, a `FrenchDeck` cannot be shuffled, because it is *immutable*: the cards and their positions cannot be changed, except by violating encapsulation and handling the `_cards` attribute directly. In Chapter 11 that will be fixed by adding a one-line `__setitem__` method.
-  
+
 ## How special methods are used
 The first thing to know about special methods is that they are meant to be called by the Python interpreter, and not by you. You don’t write `my_object.__len__()`. You write `len(my_object)` and, if `my_object` is an instance of a user defined class, then Python calls the `__len__` instance method you implemented.  
 
@@ -239,7 +239,7 @@ We will start by designing the `API` for such a class by writing a simulated con
 >>> v1 + v2
 Vector(4, 5)
 ```
-  
+
 Note how the + operator produces a `Vector` result which is displayed in a friendly manner in the console.
 
 The `abs` built-in function returns the absolute value of integers and floats, and the magnitude of `complex` numbers, so to be consistent our `API` also uses `abs` to calculate the magnitude of a vector:  
@@ -249,7 +249,7 @@ The `abs` built-in function returns the absolute value of integers and floats, a
 >>> abs(v)
 5.0
 ```
-  
+
 We can also implement the `*` operator to perform scalar multiplication, i.e. multiplying a vector by a number to produce a new vector with the same direction and a multiplied magnitude:  
 
 ```python
@@ -258,7 +258,7 @@ Vector(9, 12)
 >>> abs(v * 3)
 15.0
 ```
-  
+
 Example 1-2 is a `Vector` class implementing the operations just described, through the use of the special methods `__repr__`, `__abs__`, `__add__` and `__mul__`:  
 
 *Example 1-2. A simple 2D vector class.*  
@@ -289,7 +289,7 @@ class Vector:
     def __mul__(self, scalar):
         return Vector(self.x * scalar, self.y * scalar)
 ```
-  
+
 Note that although we implemented four special methods (apart from `__init__`), none of them is directly called within the class or in the typical usage of the class illustrated by the console listings. As mentioned before, the Python interpreter is the only frequent caller of most special methods. In the next sections we discuss the code for each special method.  
 
 ### String representation
@@ -330,7 +330,7 @@ A faster implementation of `Vector.__bool__` is this:
     def __bool__(self):
         return bool(self.x or self.y)
 ```
-  
+
 This is harder to read, but avoids the trip through `abs`, `__abs__`, the squares and square root. The explicit conversion to `bool` is needed because `__bool__` must return a boolean and or returns either operand as is: `x` or `y` evaluates to `x` if that is `truthy`, otherwise the result is `y`, whatever that is.  
 
 ## Overview of special methods
@@ -346,5 +346,3 @@ The grouping shown in the following tables is not exactly the same as in the off
 |category                   |method names                                  |
 |---------------------------|:---------------------------------------------|
 string/bytes representation |`__repr__`,`__str__`,`__format__`,`__bytes__`
-
-
