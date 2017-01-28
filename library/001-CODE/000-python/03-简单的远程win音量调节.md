@@ -86,5 +86,4 @@ while True:
     except socket.timeout:
         print 'time out'
         connection.close()
-
 ```
