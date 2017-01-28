@@ -61,19 +61,14 @@ while True:
         connection.settimeout(5)
         buf = connection.recv(1024)
         if buf == '1':
-
-
             print timestr() +' [code=1] MUTE ---'+str(count)
             mute()
             count+=1
         elif buf == '0':
             print '[0]power off'
-
         elif buf == '2':
-
             print timestr() +' [code=2] up volume ---'+str(count)
             for i in range(5):
-
                 upv()
             count += 1
         elif buf == '3':
@@ -86,4 +81,5 @@ while True:
     except socket.timeout:
         print 'time out'
         connection.close()
+
 ```
