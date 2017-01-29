@@ -95,7 +95,8 @@
     - [换班表生成工具](?file=001-CODE/000-python/00-换班表生成工具 "换班表生成工具")
     - [普法考试答案整理](?file=001-CODE/000-python/01-普法考试答案整理 "普法考试答案整理")
     - [大小写金额转换](?file=001-CODE/000-python/02-大小写金额转换 "大小写金额转换")
-    - [简单的远程win音量调节](?file=001-CODE/000-python/03-简单的远程win音量调节 "简单的远程win音量调节")
+    - [简单的远程win控制](?file=001-CODE/000-python/03-简单的远程win控制 "简单的远程win控制")
+    - [pytoexe设置](?file=001-CODE/000-python/04-pytoexe设置 "pytoexe设置")
 - **IDE**
 - **autohotkey**
 - **markdown**
