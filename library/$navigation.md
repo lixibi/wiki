@@ -136,6 +136,7 @@
     - [文件恢复软件](?file=006-软件应用/02-macos/00-文件恢复软件 "文件恢复软件")
     - [NTFS读写](?file=006-软件应用/02-macos/01-NTFS读写 "NTFS读写")
     - [macos驱动](?file=006-软件应用/02-macos/03-macos驱动 "macos驱动")
+    - [Xcode离线下载](?file=006-软件应用/02-macos/04-Xcode离线下载 "Xcode离线下载")
 - **Linux**
 - **ios**
 - **Android**
