@@ -2,6 +2,9 @@
   "name": "李喜碧wiki",
   "ver": "",
   "logo": "http://tva1.sinaimg.cn/crop.0.0.640.640.180/62e8e742jw8entbj46ukuj20hs0hsglw.jpg",
-  "testing": true,
-  "github-url":"https://github.com/lixibi/wiki"
+  "testing": false,
+  "github-url":"https://github.com/lixibi/wiki",
+   "colour": "#00ff80"
+
+
 }

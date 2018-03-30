@@ -10,9 +10,7 @@
         <link rel="stylesheet" type="text/css" href="amWiki/css/markdownbody.github.css" />
         <link rel="stylesheet" type="text/css" href="amWiki/css/lhjs.github-gist.css" />
         <link rel="stylesheet" type="text/css" href="amWiki/css/amWiki.css" />
-        <link rel="shortcut icon" href="wiki.ico" type="image/x-icon" />
-        <link rel="icon" sizes="any" mask href="wiki.svg">
-        <link rel="apple-touch-icon" href="wiki.png">
+        
     </head>
 
     <body>
@@ -20,8 +18,8 @@
         <header class="header">
             <div class="header-inner">
                 <a class="logo" href="?file=首页">
-                    <img src="wiki.png" /><i></i>
-                    <b>李希宁wiki</b>
+                    <img src="http://tva1.sinaimg.cn/crop.0.0.640.640.180/62e8e742jw8entbj46ukuj20hs0hsglw.jpg" /><i></i>
+                    <b>李喜碧wiki</b>
                     <span></span>
                 </a>
                 <div class="menu-icon" id="menuIcon">
@@ -46,7 +44,7 @@
                         <use xlink:href="#icon:search"></use>
                     </svg>
                 </div>
-                <nav class="menubar scroller" id="menuBar">
+                <nav class="menubar scroller" id="menuBar" data-x-rolling="true">
                     <div class="scroller-inner">
                         <div class="scroller-content"></div>
                     </div>
@@ -54,7 +52,19 @@
             </div>
             <div class="main scroller" id="main">
                 <div class="main-inner scroller-inner">
+                    <!-- 正文 -->
                     <article class="markdown-body scroller-content" id="view"></article>
+                    <script id="template:footnote" type="text/html">
+                        <sup><a href="#fn:foot{{index}}" name="fn:note{{index}}" title="{{title}}">[{{index}}]</a></sup>
+                        <ol class="footnote"><i>[参考资料]：</i>{{list}}</ol>
+                        <li id="fn:foot{{index}}">{{content}} {{back}}</li>
+                        <li class="footnote-none" data-msg="匹配缺失">{{content}}</li>
+                        <a href="#fn:note{{index}}">
+                            <svg>
+                                <use xlink:href="#icon:footnoteBack"></use>
+                            </svg>
+                        </a>
+                    </script>
                     <!-- 上下翻页 -->
                     <div class="main-sibling scroller-content" id="mainSibling">
                         <p><span>上一篇：</span>
@@ -70,7 +80,7 @@
                             <input type="button" id="searchUpdate" value="更新所有缓存" />
                             <div class="text">
                                 <p>上次完全更新：<time id="cacheLasttime">0000-00-00 00:00:00</time></p>
-                                <p>文档总数：<b id="cacheDocTotal">0</b> / <span>已缓存：<i id="cacheState">0%</i></span></p>
+                                <p>文档总数：<b id="cacheDocTotal">0</b> <i>/</i> <span>已缓存：<i id="cacheState">0%</i></span></p>
                             </div>
                         </div>
                         <h2>全库搜索</h2>
@@ -100,65 +110,7 @@
                         </div>
                     </div>
                     <!-- 接口测试 -->
-                    <!-- 接口测试面板 -->
-<div class="testing-box" id="testingBox">
-    <h2>请求内容</h2>
-    <div class="testing-send">
-        <input class="testing-send-url" id="testingSendUrl" type="text" title="请求地址" />
-        <select class="testing-send-type" id="testingSendType" title="请求类型">
-            <option value="GET">GET</option>
-            <option value="POST">POST</option>
-            <option value="PUT">PUT</option>
-            <option value="DELETE">DELETE</option>
-        </select>
-        <h3>参数列表：</h3>
-        <ul class="testing-params" id="testingParam"></ul>
-        <script id="template:formList" type="text/html">
-            <li>
-                <span>{{describe}}</span>
-                <input class="testing-param-key" type="text" value="{{keyName}}" placeholder="参数名" title="参数名" />&nbsp;&nbsp;
-                <input class="testing-param-val" type="text" value="{{default}}" placeholder="请输入参数值 ({{valueType}})" {{required}}/>
-                <big>*</big>
-            </li>
-        </script>
-        <div class="testing-btn">
-            <button class="testing-btn-send" id="testingBtnSend">发送Ajax</button> &nbsp;|&nbsp;
-            <button id="testingBtnAdd">增加参数</button>
-            <button id="testingBtnReset">重置参数值</button>
-        </div>
-        <div class="testing-btn2">
-            <hr>
-            <div class="testing-btn-param" id="testingBtnGParam" title="全局参数将影响所有接口">[<span>全局参数设置</span>]</div>
-            <!-- 全局参数弹窗 -->
-            <div class="testing-global" id="testingGlobal">
-                <div class="testing-global-param"><i class="close">&times;</i>
-                    <h4>全局参数列表<small>(全局参数影响所有接口)</small></h4>
-                    <ul id="testingGlobalParam"></ul>
-                    <script id="template:globalParam" type="text/html">
-                        <li><i>&times;</i> 描述：
-                            <input type="text" placeholder="describe" value="{{describe}}"><br> 参数名：
-                            <input type="text" placeholder="key-name" value="{{keyName}}"><br> 参数值：
-                            <input type="text" placeholder="value" value="{{value}}">
-                        </li>
-                    </script>
-                    <div class="btn">
-                        <div class="testing-global-working" id="testingGlobalWorking" title="禁用/启用全局变量"><i></i><span>启用中</span><span>已禁用</span></div>
-                        <button class="add">增加</button> &#12288;|&#12288;
-                        <button class="save">保 存</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <h2>响应内容<small id="testingDuration"></small>
-        <svg id="testingLoading">
-            <use xlink:href="#icon:loading"></use>
-        </svg>
-    </h2>
-    <div class="testing-response">
-        <iframe id="testingResponse" width="100%" frameborder="0" border="0" marginwidth="0" marginheight="0" scrolling="no" allowtransparency="yes" framespacing="0"></iframe>
-    </div>
-</div>
+                    
                 </div>
             </div>
         </div>
@@ -188,27 +140,46 @@
                 <a class="back-text" href="#">返回顶部</a>
             </div>
         </aside>
+        <!-- 图片预览 -->
+        <section class="imgsv" id="imgsView">
+            <div class="imgsv-background"></div>
+            <div class="imgsv-view" id="imgsViewInner"></div>
+            <ul class="imgsv-panel">
+                <li class="prev off">Prev</li>
+                <li class="next">Next</li>
+                <li class="original">1:1</li>
+                <li class="suit">适合</li>
+            </ul>
+        </section>
         <footer>
             <!-- 签名 -->
             <div class="signature">Powered by
                 <a href="https://github.com/TevinLi/amWiki" target="_blank">amWiki</a>
             </div>
         </footer>
+        <!-- mounts -->
+        <div class="hidden" aw-include="mountLinks">
+            <script>AWConfig={"name":"李喜碧wiki","ver":"","logo":"http://tva1.sinaimg.cn/crop.0.0.640.640.180/62e8e742jw8entbj46ukuj20hs0hsglw.jpg","testing":false,"colour":"undefined","version":"","pageMounts":false,"githubUrl":"https://github.com/lixibi/wiki","libraryPrefix":""}</script>
+        </div>
         <!-- js -->
         <div class="hidden">
             <script type="text/javascript" src="amWiki/js/gbk.js"></script>
+            <script type="text/javascript" src="amWiki/js/pinyin.js"></script>
             <script type="text/javascript" src="amWiki/js/jquery-compat-3.1.0.min.js"></script>
             <script type="text/javascript" src="amWiki/js/marked.min.js"></script>
-            <script type="text/javascript" src="amWiki/js/highlight.min.js"></script>
+            <script type="text/javascript" src="amWiki/js/highlight.pack.js"></script>
             <script type="text/javascript" src="amWiki/js/raphael-min.js"></script>
             <script type="text/javascript" src="amWiki/js/flowchart.min.js"></script>
             <script type="text/javascript" src="amWiki/js/amWiki.tools.js"></script>
             <script type="text/javascript" src="amWiki/js/amWiki.storage.js"></script>
             <script type="text/javascript" src="amWiki/js/amWiki.search.js"></script>
+            <script type="text/javascript" src="amWiki/js/amWiki.search.worker.js"></script>
             <script type="text/javascript" src="amWiki/js/amWiki.docs.js"></script>
-            <script src="amWiki/js/amWiki.testing.js"></script>
+            
             <script type="text/javascript" src="amWiki/js/amWiki.scrollbar.js"></script>
+            <script type="text/javascript" src="amWiki/js/amWiki.imgsView.js"></script>
             <script type="text/javascript" src="amWiki/js/amWiki.js"></script>
+            
         </div>
         <!-- svg -->
         <div class="hidden" id="svgSymbols"></div>
